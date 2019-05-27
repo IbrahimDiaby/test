@@ -534,7 +534,7 @@ div.info i{
         height: auto;
         position: absolute;
         top: 30px;
-        left: -230px;
+        left: -100%;
     }
     
     nav.navbar ul li:nth-child(3):hover ul{
@@ -542,7 +542,7 @@ div.info i{
         height: auto;
         position: absolute;
         top: 55px;
-        left: -230px;
+        left: -100%;
     }
     
     nav.navbar ul li:nth-child(4):hover ul{
@@ -550,7 +550,11 @@ div.info i{
         height: auto;
         position: absolute;
         top: 28px;
-        left: -230px;
+        left: -100%;
+    }
+
+    li.subtitle{
+        width: 80px;
     }
 
     /* Footer */
@@ -651,6 +655,21 @@ div.info i{
     div.affichage img{
         width: 30%;
         height: auto;
+    }
+
+    nav.navbar ul li:nth-child(2):hover ul li{
+        animation: myanimation1 900ms ease-in-out 1s 1 alternate forwards;
+        width: 95%;
+    }
+    
+    nav.navbar ul li:nth-child(3):hover ul li{
+        animation: myanimation2 900ms ease-in-out 1s 1 alternate forwards;
+        width: 95%;
+    }
+    
+    nav.navbar ul li:nth-child(4):hover ul li{
+        animation: myanimation3 900ms ease-in-out 1s 1 alternate forwards;
+        width: 95%;
     }
 }
 

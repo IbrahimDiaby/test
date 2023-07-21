@@ -3,13 +3,13 @@ global $_POST;
 $mail_to = 'contact@csi-uvci.com'; //Your email here
 
 // Required fields
-$email = isset( $_POST['email'] ) ? strip_tags( trim( $_POST['email'] ) ) : '';
-$name  = isset( $_POST['name'] ) ? strip_tags( trim( $_POST['name'] ) ) : '';
-$text  = isset( $_POST['message'] ) ? strip_tags( trim( $_POST['message'] ) ) : '';
+$email = isset( $_POST['Email'] ) ? strip_tags( trim( $_POST['Email'] ) ) : '';
+$name  = isset( $_POST['Name'] ) ? strip_tags( trim( $_POST['Name'] ) ) : '';
+$text  = isset( $_POST['Message'] ) ? strip_tags( trim( $_POST['Message'] ) ) : '';
+$phone     = isset( $_POST['Phone'] ) ? strip_tags( trim( $_POST['Phone'] ) ) : '';
+$subject   = isset( $_POST['Object'] ) ? strip_tags( trim( $_POST['Object'] ) ) : '';
 // Additional fields
-$subject   = isset( $_POST['subject'] ) ? strip_tags( trim( $_POST['subject'] ) ) : '';
 $permalink = isset( $_POST['permalink'] ) ? strip_tags( trim( $_POST['permalink'] ) ) : '';
-$phone     = isset( $_POST['phone'] ) ? strip_tags( trim( $_POST['phone'] ) ) : '';
 $company   = isset( $_POST['company'] ) ? strip_tags( trim( $_POST['company'] ) ) : '';
 
 

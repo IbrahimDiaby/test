@@ -1,12 +1,15 @@
-@media screen and (max-width : 1440px){
-    *{
+*{
     margin: 0px;
     padding: 0px;
     text-decoration: none;
     color: inherit;
     list-style-type: none;
     /* font-family: 'Merriweather', serif; */
+    transition: 0.6s;
+    /* overflow-x: hidden; */
 }
+
+@media screen and (max-width : 1440px){
 
 h1, h2, h3, h4, h5, h6{
     text-transform: uppercase;
@@ -71,15 +74,26 @@ div.nav-services{
 
 nav.navbar{
     position: relative;
+    display: flex;
+    justify-items: flex-end;
+    justify-content: flex-end;
     top: 0px;
-    left: 49%;
-    height: 30px;
-    width: 51%;
+    min-height: 30px;
+    width: 100%;
+}
+nav.navbar ul{
+    width: inherit;
+    display: flex;
+    justify-items: flex-end;
+    justify-content: flex-end;
 }
 
 nav.navbar ul li ul{
     width: 0px;
     height: 0px;
+    display: flex;
+    flex-direction: column;
+    transform: translate(-7px, 0px);
 }
 
 nav.navbar ul li ul::after{
@@ -96,7 +110,8 @@ nav.navbar ul li:nth-child(2):hover ul{
     height: auto;
     position: absolute;
     top: 40px;
-    left: 88px;
+    display: flex;
+    flex-direction: column;
 }
 
 nav.navbar ul li:nth-child(3):hover ul{
@@ -104,7 +119,6 @@ nav.navbar ul li:nth-child(3):hover ul{
     height: auto;
     position: absolute;
     top: 40px;
-    left: 202px;
 }
 
 nav.navbar ul li:nth-child(4):hover ul{
@@ -112,15 +126,16 @@ nav.navbar ul li:nth-child(4):hover ul{
     height: auto;
     position: absolute;
     top: 40px;
-    right: -120px;
 }
 
 nav.navbar ul li:hover ul li{
     display: flex;
+    flex-direction: column;
     opacity: 0;
     width: 250px;
     position: relative;
 }
+
 
 nav.navbar ul li:nth-child(2):hover ul li{
     animation: myanimation1 900ms ease-in-out 1s 1 alternate forwards;
@@ -190,12 +205,15 @@ article div.container h3{
     text-align: center
 }
 
-article div.container div.affichage{
 
+article div.container p{
+    padding: 0px 5px;
+}
+
+article div.container div.affichage{
     display: flex;
     flex-direction: row;
     flex: auto;
-
 }
 
 article div.container div.affichage img{
@@ -233,30 +251,77 @@ div.learn a.more{
     margin: 15px 0px;
 }
 
-.movies-card aside, .movies-card{
-    display: flex;
+.movies-card{
+    min-height: 600px;
 }
 
-.movies-list{
+.movies-card aside, .movies-card{
+    display: flex;
+    width: 100%;
+}
+
+/* 
+.movies-card{
+    width: 100%;
+} */
+
+/* .movies-list{
     width: 30%;
     height: auto;
     display: flex;
     flex-wrap: wrap;
-    /* background-color: rgba(255, 000, 000, 0.8); */
+    background-color: rgba(255, 000, 000, 0.8);
     background-image: url("./../images/bg.jpg");
     background-size: cover;
+    display: none;
     
+} */
+
+/* aside i#prev::before, aside i#next::before,  */
+aside i#prev::after, aside i#next::after
+{
+    content: '';
+    clear: both;
+}
+
+aside i#prev, aside i#next{
+    position: absolute;
+    top: 45%;
+    color: #CDAC5F;
+    font-size: 3rem;
+    font-weight: bolder;
+    height: fit-content;
+}
+
+aside i#prev:hover, aside i#next:hover{
+    cursor: pointer;
+}
+
+aside i#prev{
+    left : 1%;
+}
+
+aside i#next{
+    right : 1%;
 }
 
 .movies-list .movies-min{
     width: 25%;
     margin: 10px 4%;
     height: 50px;
+    display: none;
 }
 
 .movies-block{
-    width: 70%;
-    max-height: 300px;
+    display: block;
+    position: relative;
+    width: 100%;
+    height: 600px;
+}
+
+.movies-block iframe{
+    min-height: 100%;
+    min-width: 100%;
 }
 
 .multimedia-content{
@@ -268,6 +333,7 @@ li.multimedia-icon {
     width: 60px;
     height: 60px;
     margin: 5px 10px;
+    overflow: hidden;
 }
 
 li.multimedia-icon img{
@@ -296,6 +362,7 @@ input[type="text"]{
     padding: 0px 7px;
     font-weight: bold;
     color: #191919;
+    outline: none;
 }
 
 textarea{
@@ -304,6 +371,7 @@ textarea{
     padding: 10px 5px;
     font-weight: bold;
     color: #191919;
+    outline: none;
 }
 
 input[type="button"]{
@@ -316,11 +384,13 @@ input[type="button"]{
     font-weight: bold;
     font-size: 20px;
     cursor: pointer;
+    outline: none;
 }
 
 div.pagination{
     padding: 15px 0px;
     text-align: end;
+    display: none;
 }
 
 div.pagination ul{
@@ -374,6 +444,13 @@ div.footer .container .links ul li, div.footer .container .info ul li{
     flex-direction: column;
     width: 100%;
     height: 30px;
+}
+
+.menu-container{
+    display: none;
+    width: 100%;
+    justify-content: flex-end;
+    justify-items: flex-end;
 }
 
 #fa-bars, #fa-times{
@@ -488,14 +565,25 @@ div.info i{
         font-size: 70%;
     }
 
+    nav.navbar ul{
+        flex-direction: column;
+    }
+
+    .menu-container{
+        display: flex;
+    }
+
+    nav.navbar ul li {
+        padding: 10px 0px;
+    }
+
     #fa-bars, #fa-times{
+        padding: 5px;
         position: relative;
-        top: 10px;
-        left: 88%;
         height: 30px;
-        width: 50%;
-        font-size: 50px;
-        display: block;
+        font-size: 30px;
+        cursor: pointer;
+        display: flex;
         color: red;
         animation: myanimation3 900ms ease-in-out 1s 1 alternate forwards;
     }
@@ -525,32 +613,26 @@ div.info i{
         display: none;
     }
 
-    div.nav{
-        height: 170px;
+    nav.navbar ul li ul {
+        transform: translate(-2px, -30px);
     }
 
-    nav.navbar ul li:nth-child(2):hover ul{
-        width: 100%;
-        height: auto;
-        position: absolute;
-        top: 30px;
-        left: -100%;
+    div.nav{
+        height: 300px;
     }
-    
-    nav.navbar ul li:nth-child(3):hover ul{
-        width: 100%;
-        height: auto;
-        position: absolute;
-        top: 55px;
-        left: -100%;
+
+    .nav ul{
+        margin: 0px;
     }
-    
-    nav.navbar ul li:nth-child(4):hover ul{
+
+    nav.navbar > ul > li:nth-child(2):hover {
+        height: 110px;
+    }
+
+    nav.navbar ul li:nth-child(2):hover ul, nav.navbar ul li:nth-child(3):hover ul, nav.navbar ul li:nth-child(4):hover ul{
         width: 100%;
         height: auto;
-        position: absolute;
-        top: 28px;
-        left: -100%;
+        position: relative;
     }
 
     li.subtitle{
@@ -566,6 +648,14 @@ div.info i{
         background-color: #191919;
     }
     
+    /* #movies-lst{
+        display: none;
+    }
+
+    .movies-block{
+        width: 100%;
+    } */
+
     div.footer ul li{
         float: right;
         width: 40px;
@@ -659,18 +749,23 @@ div.info i{
 
     nav.navbar ul li:nth-child(2):hover ul li{
         animation: myanimation1 900ms ease-in-out 1s 1 alternate forwards;
-        width: 95%;
+        width: 100%;
     }
     
     nav.navbar ul li:nth-child(3):hover ul li{
         animation: myanimation2 900ms ease-in-out 1s 1 alternate forwards;
-        width: 95%;
+        width: 100%;
     }
     
     nav.navbar ul li:nth-child(4):hover ul li{
         animation: myanimation3 900ms ease-in-out 1s 1 alternate forwards;
-        width: 95%;
+        width: 100%;
     }
+
+    i#prev, i#next{
+        font-size: 10px;
+    }
+
 }
 
 @media screen and (max-width : 428px){

@@ -23,8 +23,10 @@
             </div>
 
             <div class="nav nav-services">
-                <i id="fa-bars" class="fas fa-bars"></i>
-                <i id="fa-times" class="fas fa-times"></i>
+                <div class="menu-container">
+                    <i id="fa-bars" class="fas fa-bars"></i>
+                    <i id="fa-times" class="fas fa-times"></i>
+                </div>
                 <nav class="navbar">
                     <ul>
                         <li class="link"><a href="./index.html">Accueil</a></li>
@@ -58,22 +60,20 @@
             <article>
                 <h1>Vitrines</h1>
 
-                <div class="container">
-                    <span>Affiches maquette</span>
-                    <span>Maquette Site Web</span>
-                    <span>Brochures</span>
-                    <span>Carte de visite</span>
-                    <span>Carte de vœux</span>
-                    <span>Conception Site Web</span>
-                    <span>Curriculum vitæ</span>
-                    <span>Livre</span>
-                    <span>Plaquette commerciale</span>
-                    <span>Production Clip vidéo</span>
-                    <span>Production Web Série</span>
-                    <span>Prospectus</span>
-                    <span>Logo</span>
-                    <span>Magazine</span>
-                    <span>Affiches maquette</span>
+                <div class="container" id="category">
+                    <span><a href="<?php echo $_SERVER['PHP_SELF']?category=affiches maquettes ?>">Affiches maquettes</a></span>
+                    <span><a href="<?php echo $_SERVER['PHP_SELF']?category=maquette site web ?>">Maquette Site Web</a></span>
+                    <span><a href="<?php echo $_SERVER['PHP_SELF']?category=brochure ?>">Brochures</a></span>
+                    <span><a href="<?php echo $_SERVER['PHP_SELF']?category=carte de visite ?>">Carte de visite</a></span>
+                    <span><a href="<?php echo $_SERVER['PHP_SELF']?category=carte de voeaux ?>">Carte de vœux</a></span>
+                    <span><a href="<?php echo $_SERVER['PHP_SELF']?category=cv ?>">Curriculum vitæ</a></span>
+                    <span><a href="<?php echo $_SERVER['PHP_SELF']?category=livre ?>">Livre</a></span>
+                    <span><a href="<?php echo $_SERVER['PHP_SELF']?category=plaquette commerciale ?>">Plaquette commerciale</a></span>
+                    <span><a href="<?php echo $_SERVER['PHP_SELF']?category=clip video ?>">Production Clip vidéo</a></span>
+                    <span><a href="<?php echo $_SERVER['PHP_SELF']?category=web serie ?>">Production Web Série</a></span>
+                    <span><a href="<?php echo $_SERVER['PHP_SELF']?category=prospectus ?>">Prospectus</a></span>
+                    <span><a href="<?php echo $_SERVER['PHP_SELF']?category=logo ?>">Logo</a></span>
+                    <span><a href="<?php echo $_SERVER['PHP_SELF']?category=magazine ?>">Magazine</a></span>
                 </div>
             </article>
 
@@ -152,5 +152,6 @@
 
     <script src="./js/pop-up.js"></script>
     <script src="./js/nav.js"></script>
+    <script src="./js/img.js"></script>
 </body>
 </html>

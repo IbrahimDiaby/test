@@ -25,8 +25,10 @@
             </div>
 
             <div class="nav nav-accueil">
-                <i id="fa-bars" class="fas fa-bars"></i>
-                <i id="fa-times" class="fas fa-times"></i>
+                <div class="menu-container">
+                    <i id="fa-bars" class="fas fa-bars"></i>
+                    <i id="fa-times" class="fas fa-times"></i>
+                </div>
                 <nav class="navbar">
                     <ul>
                         <li class="active link"><a href="./index.html">Accueil</a></li>
@@ -104,7 +106,13 @@
                     <div class="movies-content">
                         <h3>Videos en ligne YouTube</h3>
                         <div class="movies-card">
-                            <aside class="movies-list" id="movies-lst">
+                            <aside class="movies-block" id="video">
+                                <iframe src="https://www.youtube.com/embed/5jw756SIkfw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                <i id="prev" class="fa fa-chevron-left"></i>
+                                <i id="next" class="fa fa-chevron-right"></i>
+                            </aside>
+                            
+                            <!-- <aside class="movies-list" id="movies-lst">
                                 <div class="movies-min">
                                     <iframe width="100%" height="100%" src="https://www.youtube.com/embed/5jw756SIkfw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                                 </div>
@@ -135,10 +143,7 @@
                                 <div class="movies-min">
                                     
                                 </div>
-                            </aside>
-                            <aside class="movies-block" id="video">
-                                <iframe src="https://www.youtube.com/embed/5jw756SIkfw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                            </aside>
+                            </aside> -->
                         </div>
                     </div>
                     
@@ -210,7 +215,7 @@
                             <input type="text" name="Object" id="Object" placeholder="Objet" id="">
                         </div>
                         <div class="">
-                            <textarea name="Message" id="Message" >Message</textarea>
+                            <textarea name="Message" id="Message" placeholder="Message..."></textarea>
                         </div>
                         <div class="">
                             <input type="button" id="Submit" value="Envoyer">
@@ -222,11 +227,11 @@
 
             <div class="footer">
                 <ul>
-                    <li><a href="#"><img src="./images/gmail.png" alt="Gmail" title="Gmail"></a></li>
-                    <li><a href="#"><img src="./images/instagram.png" alt="Instagram" title="Instagram"></a></li>
-                    <li><a href="#"><img src="./images/Youtube.png" alt="YouTube" title="YouTube"></a></li>
-                    <li><a href="#"><img src="./images/twitter.png" alt="Twitter" title="Twitter"></a></li>
-                    <li><a href="#"><img src="./images/Facebook.png" alt="Facebook" title="Facebook"></a></li>
+                    <li><a href="mailto:willxangels@gmail.com" target="_blank"><img src="./images/gmail.png" alt="Gmail" title="Gmail"></a></li>
+                    <li><a href="#" target="_blank"><img src="./images/instagram.png" alt="Instagram" title="Instagram"></a></li>
+                    <li><a href="https://www.youtube.com/@DiamondArtChannel" target="_blank"><img src="./images/Youtube.png" alt="YouTube" title="YouTube"></a></li>
+                    <li><a href="#" target="_blank"><img src="./images/twitter.png" alt="Twitter" title="Twitter"></a></li>
+                    <li><a href="https://www.facebook.com/profile.php?id=100009111554015" target="_blank"><img src="./images/Facebook.png" alt="Facebook" title="Facebook"></a></li>
                 </ul>
                 <div class="container">
                     <div class="logo">
@@ -246,9 +251,10 @@
                         <h3>Adresse</h3>
                         <ul>
                             <li><a href="#">Port-Bouet - 12 BP 2333 Abidjan 12</a></li>
-                            <li><a href="tel:+22578933298"><i class="fas fa-phone"></i> (+225) 78 93 32 98</a></li>
-                            <li><a href="tel:+22553878773"><i class="fas fa-phone"></i> (+225) 53 87 87 73</a></li>
+                            <li><a href="tel:+2250778933298"><i class="fas fa-phone"></i> (+225) 07 78 93 32 98</a></li>
+                            <li><a href="tel:+2250253878773"><i class="fas fa-phone"></i> (+225) 02 53 87 87 73</a></li>
                             <li><a href="mailto:willoangels96@gmail.com"><i class="fas fa-mail-bulk"></i> willoangels96@gmail.com</a></li>
+                            <li><a href="mailto:willxangels@gmail.com"><i class="fas fa-mail-bulk"></i> willxangels@gmail.com</a></li>
                         </ul>
                     </div>
                 </div>
@@ -264,8 +270,8 @@
         
     </footer> -->
 
-    <script src="./js/pop-up.js"></script>
-    <script src="./js/video.js"></script>
-    <script src="./js/nav.js"></script>
+    <script src="./js/pop-up.js" defer></script>
+    <script src="./js/video.js" defer></script>
+    <script src="./js/nav.js" defer></script>
 </body>
 </html>
